@@ -1,6 +1,9 @@
 # Claude
 .claude/
 
+# Креслиники
+diagrams/
+
 # Дані польотів (занадто великі)
 data/flights/
 data/*.tif
