@@ -1,0 +1,85 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="uMTHWSdcE0MBvI2oyvav" name="Страница-1">
+    <mxGraphModel dx="1829" dy="1260" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11;" value="&lt;i&gt;«person»&lt;/i&gt;&lt;br&gt;&lt;b&gt;Агроном&lt;/b&gt;&lt;br&gt;Завантажує знімки,&lt;br&gt;переглядає результати" vertex="1">
+          <mxGeometry height="100" width="210" x="710" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 4;fontSize=13;fontStyle=1;fontFamily=Times New Roman;verticalAlign=top;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="650" width="1320" x="160" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11;" value="&lt;i&gt;«container»&lt;/i&gt;&lt;br&gt;&lt;b&gt;Клієнтський веб-застосунок&lt;/b&gt;&lt;br&gt;[Веб-застосунок]&lt;br&gt;Інтерфейс перегляду&lt;br&gt;карт та результатів" vertex="1">
+          <mxGeometry height="130" width="240" x="695" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11;" value="&lt;i&gt;«container»&lt;/i&gt;&lt;br&gt;&lt;b&gt;API-сервер&lt;/b&gt;&lt;br&gt;[Моноліт]&lt;br&gt;Бізнес-логіка,&lt;br&gt;обробка запитів" vertex="1">
+          <mxGeometry height="130" width="240" x="695" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11;" value="&lt;i&gt;«container»&lt;/i&gt;&lt;br&gt;&lt;b&gt;Воркер&lt;/b&gt;&lt;br&gt;[Python + RQ Worker]&lt;br&gt;Фонова обробка:&lt;br&gt;індекси, сегментація" vertex="1">
+          <mxGeometry height="130" width="240" x="690" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11;boundedLbl=1;backgroundOutline=1;size=15;" value="&lt;i&gt;«container»&lt;/i&gt;&lt;br&gt;&lt;b&gt;База даних&lt;/b&gt;&lt;br&gt;[PostgreSQL + PostGIS]&lt;br&gt;Геопросторові дані" vertex="1">
+          <mxGeometry height="150" width="220" x="1220" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11;boundedLbl=1;backgroundOutline=1;size=15;" value="&lt;i&gt;«container»&lt;/i&gt;&lt;br&gt;&lt;b&gt;Брокер черги&lt;/b&gt;&lt;br&gt;[Redis]&lt;br&gt;Черга задач RQ" vertex="1">
+          <mxGeometry height="130" width="220" x="300" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontFamily=Times New Roman;fontSize=11;" value="&lt;i&gt;«container»&lt;/i&gt;&lt;br&gt;&lt;b&gt;Фотограмметричний&lt;br&gt;процесор&lt;/b&gt;&lt;br&gt;[NodeODM / OpenDroneMap]&lt;br&gt;Ортофото, хмара точок" vertex="1">
+          <mxGeometry height="130" width="270" x="200" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="10" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=11;" target="4" value="Завантажує знімки,&lt;br&gt;переглядає карту">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="11" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=11;" target="5" value="HTTP запити">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="12" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=11;rounded=0;curved=0;" target="7" value="Читає та записує дані">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="13" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=11;entryPerimeter=0;rounded=0;curved=0;" target="8" value="Ставить задачі&lt;br&gt;в чергу RQ">
+          <mxGeometry relative="1" x="0.0011" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="695" y="490" />
+              <mxPoint x="580" y="490" />
+              <mxPoint x="580" y="375" />
+            </Array>
+            <mxPoint x="694.94" y="492.5" as="sourcePoint" />
+            <mxPoint x="59.93999999999977" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14" edge="1" parent="1" source="8" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=11;exitPerimeter=0;rounded=0;curved=0;" target="6" value="Передає задачу&lt;br&gt;воркеру">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="440" />
+              <mxPoint x="530" y="662" />
+            </Array>
+            <mxPoint x="39.99999999999977" y="360" as="sourcePoint" />
+            <mxPoint x="670" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="15" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=11;" target="9" value="Передає знімки,&lt;br&gt;отримує ортофото">
+          <mxGeometry relative="1" x="0.022" y="5" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="690" y="695" />
+            </Array>
+            <mxPoint x="690" y="690" as="sourcePoint" />
+            <mxPoint x="-60" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="16" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=-20;fontFamily=Times New Roman;fontSize=11;rounded=0;curved=0;" target="7" value="Зберігає індекси&lt;br&gt;та аномалії">
+          <mxGeometry relative="1" x="0.2804" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="930" y="660" />
+              <mxPoint x="1140" y="660" />
+              <mxPoint x="1140" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

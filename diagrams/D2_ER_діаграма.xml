@@ -1,0 +1,177 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="LQ4c4uGyxPXlslLkZQ1g" name="Страница-1">
+    <mxGraphModel dx="1437" dy="990" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c_users" parent="1" style="swimlane;fontStyle=1;fontFamily=Times New Roman;fontSize=11;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=1;collapsible=0;marginBottom=0;fillColor=#ffffff;strokeColor=#000000;" value="users" vertex="1">
+          <mxGeometry height="156" width="260" x="80" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="r_users_id" parent="c_users" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="PK  id : UUID" vertex="1">
+          <mxGeometry height="26" width="260" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="r_users_uname" parent="c_users" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    username : VARCHAR(100)" vertex="1">
+          <mxGeometry height="26" width="260" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="r_users_pw" parent="c_users" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    password_hash : VARCHAR(255)" vertex="1">
+          <mxGeometry height="26" width="260" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="r_users_role" parent="c_users" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    role : VARCHAR(20)" vertex="1">
+          <mxGeometry height="26" width="260" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="r_users_ca" parent="c_users" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    created_at : TIMESTAMP" vertex="1">
+          <mxGeometry height="26" width="260" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="c_fields" parent="1" style="swimlane;fontStyle=1;fontFamily=Times New Roman;fontSize=11;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=1;collapsible=0;marginBottom=0;fillColor=#ffffff;strokeColor=#000000;" value="fields" vertex="1">
+          <mxGeometry height="156" width="270" x="470" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="r_fields_id" parent="c_fields" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="PK  id : UUID" vertex="1">
+          <mxGeometry height="26" width="270" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="r_fields_name" parent="c_fields" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    name : VARCHAR(255)" vertex="1">
+          <mxGeometry height="26" width="270" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="r_fields_boundary" parent="c_fields" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    boundary : GEOMETRY(POLYGON)" vertex="1">
+          <mxGeometry height="26" width="270" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="r_fields_area" parent="c_fields" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    area_ha : FLOAT" vertex="1">
+          <mxGeometry height="26" width="270" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="r_fields_ca" parent="c_fields" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    created_at : TIMESTAMP" vertex="1">
+          <mxGeometry height="26" width="270" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="c_fieldmarkers" parent="1" style="swimlane;fontStyle=1;fontFamily=Times New Roman;fontSize=11;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=1;collapsible=0;marginBottom=0;fillColor=#ffffff;strokeColor=#000000;" value="field_markers" vertex="1">
+          <mxGeometry height="182" width="270" x="860" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="r_fm_id" parent="c_fieldmarkers" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="PK  id : UUID" vertex="1">
+          <mxGeometry height="26" width="270" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="r_fm_fid" parent="c_fieldmarkers" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="FK  field_id : UUID" vertex="1">
+          <mxGeometry height="26" width="270" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="r_fm_lat" parent="c_fieldmarkers" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    lat : FLOAT" vertex="1">
+          <mxGeometry height="26" width="270" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="r_fm_lon" parent="c_fieldmarkers" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    lon : FLOAT" vertex="1">
+          <mxGeometry height="26" width="270" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="r_fm_note" parent="c_fieldmarkers" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    note : TEXT" vertex="1">
+          <mxGeometry height="26" width="270" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="r_fm_ca" parent="c_fieldmarkers" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    created_at : TIMESTAMP" vertex="1">
+          <mxGeometry height="26" width="270" y="156" as="geometry" />
+        </mxCell>
+        <mxCell id="c_flights" parent="1" style="swimlane;fontStyle=1;fontFamily=Times New Roman;fontSize=11;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=1;collapsible=0;marginBottom=0;fillColor=#ffffff;strokeColor=#000000;" value="flights" vertex="1">
+          <mxGeometry height="286" width="270" x="470" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="r_flt_id" parent="c_flights" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="PK  id : UUID" vertex="1">
+          <mxGeometry height="26" width="270" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="r_flt_fid" parent="c_flights" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="FK  field_id : UUID" vertex="1">
+          <mxGeometry height="26" width="270" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="r_flt_fa" parent="c_flights" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    flown_at : TIMESTAMP" vertex="1">
+          <mxGeometry height="26" width="270" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="r_flt_rp" parent="c_flights" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    raw_path : TEXT" vertex="1">
+          <mxGeometry height="26" width="270" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="r_flt_st" parent="c_flights" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    status : VARCHAR(50)" vertex="1">
+          <mxGeometry height="26" width="270" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="r_flt_odm" parent="c_flights" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    odm_task_uuid : TEXT" vertex="1">
+          <mxGeometry height="26" width="270" y="156" as="geometry" />
+        </mxCell>
+        <mxCell id="r_flt_rq" parent="c_flights" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    rq_job_id : TEXT" vertex="1">
+          <mxGeometry height="26" width="270" y="182" as="geometry" />
+        </mxCell>
+        <mxCell id="r_flt_bbox" parent="c_flights" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    orthophoto_bbox : TEXT" vertex="1">
+          <mxGeometry height="26" width="270" y="208" as="geometry" />
+        </mxCell>
+        <mxCell id="r_flt_notes" parent="c_flights" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    notes : TEXT" vertex="1">
+          <mxGeometry height="26" width="270" y="234" as="geometry" />
+        </mxCell>
+        <mxCell id="r_flt_ca" parent="c_flights" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    created_at : TIMESTAMP" vertex="1">
+          <mxGeometry height="26" width="270" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="c_indexmaps" parent="1" style="swimlane;fontStyle=1;fontFamily=Times New Roman;fontSize=11;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=1;collapsible=0;marginBottom=0;fillColor=#ffffff;strokeColor=#000000;" value="index_maps" vertex="1">
+          <mxGeometry height="234" width="270" x="140" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="r_im_id" parent="c_indexmaps" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="PK  id : UUID" vertex="1">
+          <mxGeometry height="26" width="270" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="r_im_fid" parent="c_indexmaps" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="FK  flight_id : UUID" vertex="1">
+          <mxGeometry height="26" width="270" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="r_im_it" parent="c_indexmaps" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    index_type : VARCHAR(10)" vertex="1">
+          <mxGeometry height="26" width="270" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="r_im_fp" parent="c_indexmaps" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    file_path : TEXT" vertex="1">
+          <mxGeometry height="26" width="270" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="r_im_mn" parent="c_indexmaps" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    min_value : FLOAT" vertex="1">
+          <mxGeometry height="26" width="270" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="r_im_mx" parent="c_indexmaps" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    max_value : FLOAT" vertex="1">
+          <mxGeometry height="26" width="270" y="156" as="geometry" />
+        </mxCell>
+        <mxCell id="r_im_me" parent="c_indexmaps" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    mean_value : FLOAT" vertex="1">
+          <mxGeometry height="26" width="270" y="182" as="geometry" />
+        </mxCell>
+        <mxCell id="r_im_ca" parent="c_indexmaps" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    created_at : TIMESTAMP" vertex="1">
+          <mxGeometry height="26" width="270" y="208" as="geometry" />
+        </mxCell>
+        <mxCell id="c_anomalyzones" parent="1" style="swimlane;fontStyle=1;fontFamily=Times New Roman;fontSize=11;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=1;collapsible=0;marginBottom=0;fillColor=#ffffff;strokeColor=#000000;" value="anomaly_zones" vertex="1">
+          <mxGeometry height="208" width="280" x="810" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="r_az_id" parent="c_anomalyzones" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="PK  id : UUID" vertex="1">
+          <mxGeometry height="26" width="280" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="r_az_fid" parent="c_anomalyzones" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="FK  flight_id : UUID" vertex="1">
+          <mxGeometry height="26" width="280" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="r_az_it" parent="c_anomalyzones" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    index_type : VARCHAR(10)" vertex="1">
+          <mxGeometry height="26" width="280" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="r_az_zg" parent="c_anomalyzones" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    zone_geom : GEOMETRY(MULTIPOLY)" vertex="1">
+          <mxGeometry height="26" width="280" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="r_az_th" parent="c_anomalyzones" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    threshold : FLOAT" vertex="1">
+          <mxGeometry height="26" width="280" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="r_az_ah" parent="c_anomalyzones" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    area_ha : FLOAT" vertex="1">
+          <mxGeometry height="26" width="280" y="156" as="geometry" />
+        </mxCell>
+        <mxCell id="r_az_ca" parent="c_anomalyzones" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;fontFamily=Times New Roman;fontSize=10;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="    created_at : TIMESTAMP" vertex="1">
+          <mxGeometry height="26" width="280" y="182" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="r_fields_ca" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;fontFamily=Times New Roman;fontSize=10;exitX=0.498;exitY=1.033;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="605" y="260" as="sourcePoint" />
+            <mxPoint x="605" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="r_fields_id" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=10;rounded=0;curved=0;" target="r_fm_fid" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="r_flt_id" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;fontFamily=Times New Roman;fontSize=10;rounded=0;curved=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="420" y="379" />
+              <mxPoint x="420" y="795" />
+            </Array>
+            <mxPoint x="410" y="795" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="r_flt_id" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=10;rounded=0;curved=0;" target="r_az_fid" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="790" y="379" />
+              <mxPoint x="790" y="795" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

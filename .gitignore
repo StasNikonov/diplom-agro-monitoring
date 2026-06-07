@@ -1,0 +1,41 @@
+# Claude
+.claude/
+
+# Дані польотів (занадто великі)
+data/flights/
+data/*.tif
+data/*.jpg
+data/*.png
+data/*.zip
+
+# Середовища
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# Node
+node_modules/
+dist/
+.next/
+
+# Збірки
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+
+# Логи
+*.log
